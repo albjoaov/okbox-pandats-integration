@@ -4,18 +4,19 @@ Link planilha Okbox: https://docs.google.com/spreadsheets/d/19m90EO8FH1onE5hIhtS
 
 ## Passos
 
-0. Crie um arquivo chamado `.env` a partir do `.env.example` e preencha com os valores corretos de API do cliente
-1. Faça o download de leads a partir da planilha `.CSV` **(somente nesse formato)**
-2. Salve o arquivo com o nome `leads.csv` (e somente assim) dentro dessa pasta
+0. Garanta que o IP Externo da sua máquina estará cadastrado corretamente na whitelist da API. Você pode fazer isso solicitando (caso seu e-mail estiver habilitado pelo cliente) para o endereço `support@pandats.com`
+1. Crie um arquivo chamado `.env` a partir do `.env.example` e preencha com os valores corretos de API do cliente
+2. Faça o download de leads a partir da planilha `.CSV` **(somente nesse formato)**
+3. Salve o arquivo com o nome `leads.csv` (e somente assim) dentro dessa pasta
    2.1. Salve o arquivo por cima de outro, se houver
-3. Garanta que a primeira linha do csv tenha as seguintes informações:
+4. Garanta que a primeira linha do csv tenha as seguintes informações:
 
    > firstName,lastName,email,phone,country,leadSource
 
    Basta copiar e colar essa linha na primeira linha do leads.csv
 
-4. Execute o programa com o comando no terminal `npm start`
-5. Leia o terminal sempre para verificar o resultado da operação. Será algo parecido com:
+5. Execute o programa com o comando no terminal `npm start`
+6. Leia o terminal sempre para verificar o resultado da operação. Será algo parecido com:
 
 ```console
 ╰─ $ npm start
