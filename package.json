@@ -2,14 +2,17 @@
   "name": "okbox",
   "version": "1.0.0",
   "description": "",
-  "main": "vctrade.js",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2"
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "node-pandas-js": "^1.0.7"
   }
 }
