@@ -6,17 +6,14 @@ import formatLead from "./src/validation/formatLead.js";
 const jwtToken = await getJwtTokenRequest();
 let integradosSucesso = 0;
 let integradosFalha = 0;
+let rateLimitRemaing = 0;
 
 for (let i = 0; i < df.rows; i++) {
   let lead = df[i];
-  // lead = formatLead(lead);
+  lead = formatLead(lead);
   try {
     const response = await createLeadRequest(lead, jwtToken);
-    // console.log("X-RateLimit-Limit", response.headers["x-ratelimit-limit"]);
-    // console.log(
-    //   "X-RateLimit-Remaining",
-    //   response.headers["x-ratelimit-remaining"]
-    // );
+    rateLimitRemaing = response.headers["x-ratelimit-remaining"];
     if (response.status === 201) {
       console.log(`Sucesso na integração do lead ${i + 1} de ${lead.email}`);
       integradosSucesso = integradosSucesso + 1;
